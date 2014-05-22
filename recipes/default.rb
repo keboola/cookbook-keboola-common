@@ -34,6 +34,11 @@ include_recipe "keboola-common::logging"
 include_recipe "newrelic"
 include_recipe "postfix"
 
+template 'tmpwatch' do
+  path      "/etc/cron.hourly/tmpwatch"
+  source    'tmpwatch.erb'
+  mode      '0644'
+end
 
 
 
