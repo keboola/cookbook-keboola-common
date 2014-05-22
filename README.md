@@ -1,23 +1,11 @@
-Keboola Storage API Console Syrup Cookbook
+Keboola Common Cookbook
 ==============
 
-This cookbook installs Syrup with all it's dependencies.
-Cloudformation template is also provided with cookbook and performs these actions:
- * Creates EC2 instance in VPC and provision it with Syrup using this cookbook. Node name is same as stack name
- * Creates and associate DNS entry for instance `stack_name.keboola.com`
+This cookbook should be applied for all Keboola servers, installs basic packages:
+ * Rsyslog + Papertrail
+ * Creates deploy user and donwloads public ssh keys
+ * Assigns hostname from node name
+ * Newrelic server monitoring
+ * Postfix + SendGrid
+ * tmpwath
 
-
-Usage
------
-#### keboola-storage-api-console::default
-
-Just include `keboola-storage-api-console` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[keboola-storage-api-console]"
-  ]
-}
-```
