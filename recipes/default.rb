@@ -3,6 +3,8 @@
 # Recipe:: default
 #
 
+group "apache"
+
 user "deploy" do
   gid "apache"
   home "/home/deploy"
