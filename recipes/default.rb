@@ -39,7 +39,7 @@ include_recipe "postfix"
 template 'tmpwatch' do
   path      "/etc/cron.hourly/tmpwatch"
   source    'tmpwatch.erb'
-  mode      '0644'
+  mode      '0755'
 end
 
 
