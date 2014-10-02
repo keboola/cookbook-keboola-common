@@ -4,10 +4,10 @@ maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
 description      'Installs/Configures syrup'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.0'
+version          '0.2.0'
 
-depends 'newrelic'
-depends 'hostname'
-depends 'papertrail-rsyslog'
-depends 'postfix'
+depends 'newrelic', '~> 2.0.0'
+depends 'hostname', '~> 0.3.0'
+depends 'papertrail-rsyslog', '~> 1.1.0'
+depends 'postfix', '~> 3.6.0'
 
