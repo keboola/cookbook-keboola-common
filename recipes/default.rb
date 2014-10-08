@@ -42,5 +42,8 @@ template 'tmpwatch' do
   mode      '0755'
 end
 
+package "curl"
+package "git"
+package "htop"
 
 
