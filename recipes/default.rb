@@ -45,5 +45,6 @@ end
 package "curl"
 package "git"
 package "htop"
+package "strace"
 
 
