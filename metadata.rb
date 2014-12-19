@@ -4,7 +4,7 @@ maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
 description      'Installs/Configures syrup'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.4'
+version          '0.2.5'
 
 depends 'newrelic', '~> 2.0.0'
 depends 'hostname', '~> 0.3.0'
