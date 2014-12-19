@@ -9,5 +9,5 @@ version          '0.2.3'
 depends 'newrelic', '~> 2.0.0'
 depends 'hostname', '~> 0.3.0'
 depends 'papertrail-rsyslog', '~> 1.1.0'
-depends 'postfix', '~> 3.6.0'
+depends 'postfix', '3.3.1'
 
