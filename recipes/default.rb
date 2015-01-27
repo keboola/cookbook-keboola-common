@@ -48,6 +48,11 @@ monitrc "rsyslog" do
   source            "rsyslog.monit.conf.erb"
 end
 
+execute "monit_restart" do
+  command "/bin/cp /etc/monit/monitrc /etc/monit.conf"
+  notifies :restart, "service[monit]"
+end
+
 package "curl"
 package "git"
 package "htop"
