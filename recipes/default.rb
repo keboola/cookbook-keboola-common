@@ -30,11 +30,11 @@ remote_file "/home/deploy/.ssh/authorized_keys" do
   source "https://s3.amazonaws.com/keboola-configs/servers/devel_ssh_public_keys.txt"
 end
 
-
 include_recipe "hostname"
 include_recipe "keboola-common::logging"
 include_recipe "newrelic"
 include_recipe "postfix"
+include_recipe "monit"
 
 template 'tmpwatch' do
   path      "/etc/cron.hourly/tmpwatch"
@@ -42,9 +42,13 @@ template 'tmpwatch' do
   mode      '0755'
 end
 
+monitrc "rsyslog" do
+  template_cookbook "keboola-common"
+  template_source   "rsyslog.monit.conf.erb"
+  source            "rsyslog.monit.conf.erb"
+end
+
 package "curl"
 package "git"
 package "htop"
 package "strace"
-
-

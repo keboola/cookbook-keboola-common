@@ -8,6 +8,6 @@ version          '0.2.5'
 
 depends 'newrelic', '~> 2.0.0'
 depends 'hostname', '~> 0.3.0'
-depends 'papertrail-rsyslog', '~> 1.1.0'
+depends 'papertrail-rsyslog', '~> 1.2.0'
 depends 'postfix', '3.3.1'
-
+depends 'monit', '0.7.5'
