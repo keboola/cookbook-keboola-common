@@ -49,8 +49,10 @@ monitrc "rsyslog" do
 end
 
 execute "monit_restart" do
+  user "root"
+  group "root"
   command "/bin/cp /etc/monit/monitrc /etc/monit.conf"
-  notifies :restart, "service[monit]"
+  notifies :restart, "service[monit]", :delayed
 end
 
 package "curl"
