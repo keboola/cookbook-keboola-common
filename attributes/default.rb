@@ -1,6 +1,7 @@
 
 
 default['papertrail']['port'] = 49730
+default['papertrail']['queue_disk_space'] = '2g'
 
 default['postfix']['main']['smtp_sasl_auth_enable'] = 'yes'
 default['postfix']['main']['smtp_sasl_password_maps'] = 'static:'
